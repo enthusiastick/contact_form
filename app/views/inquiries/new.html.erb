@@ -1,0 +1,30 @@
+<h1>New Contact Inquiry</h1>
+
+<%= form_for(@inquiry) do |f| %>
+  <% if @inquiry.errors.any? %>
+    <p>Error(s) detected; inquiry not saved.</p>
+  <% end %>
+    <div>
+      <%= f.label :email %>:
+      <%= f.text_field :email %>
+    </div>
+    <div>
+      <%= f.label :subject %>:
+      <%= f.text_field :subject %>
+    </div>
+    <div>
+      <%= f.label :description %>:
+      <%= f.text_area :description %>
+    </div>
+    <div>
+      <%= f.label :firstname %>:
+      <%= f.text_field :firstname %>
+    </div>
+      <div>
+      <%= f.label :lastname %>:
+      <%= f.text_field :lastname %>
+    </div>
+    <div>
+      <%= f.submit "Submit" %>
+    </div>
+<% end %>
