@@ -27,7 +27,12 @@ feature 'User creates a contact inquiry' do
   end
 
   context "with invalid attributes" do
-    it "sees errors for invalid attributes"
+    it "sees errors for invalid attributes" do
+      visit '/inquiries/new'
+
+      click_on "Submit"
+      expect(page).to have_content "Error"
+    end
   end
 
 end
