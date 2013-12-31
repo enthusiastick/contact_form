@@ -39,6 +39,7 @@ group :test, :development do
   gem 'rspec-rails'
   gem 'valid_attribute'
   gem 'pry-rails'
+  gem 'launchy'
   gem 'dotenv'
 end
 

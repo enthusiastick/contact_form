@@ -1,6 +1,7 @@
 <h1>Inquiries List</h1>
+<%= link_to 'Create New', new_inquiry_path %>
 <ol>
 <% @inquiries.each do |inquiry| %>
-  <li><%= inquiry.subject + ' | ' + inquiry.firstname + ' ' + inquiry.lastname  + ' (' + inquiry.email + ')'%></li>
+  <div style="float: left"><li><%= link_to inquiry.subject, inquiry %> <%= ' | ' + inquiry.firstname + ' ' + inquiry.lastname  + ' (' + inquiry.email + ') '%></div><%= button_to "Delete", { action: "destroy", id: inquiry.id }, method: :delete, data: { confirm: "Are you sure?" } %></li>
 <% end %>
 </ol>

@@ -21,4 +21,9 @@ class InquiriesController < ApplicationController
     @inquiries = Inquiry.all
   end
 
+  def destroy
+    Inquiry.find(params[:id]).destroy
+    redirect_to inquiries_path
+  end
+
 end
