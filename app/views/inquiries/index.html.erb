@@ -1,0 +1,6 @@
+<h1>Inquiries List</h1>
+<ol>
+<% @inquiries.each do |inquiry| %>
+  <li><%= inquiry.subject + ' | ' + inquiry.firstname + ' ' + inquiry.lastname  + ' (' + inquiry.email + ')'%></li>
+<% end %>
+</ol>

@@ -17,4 +17,8 @@ class InquiriesController < ApplicationController
     @inquiry = Inquiry.find(params[:id])
   end
 
+  def index
+    @inquiries = Inquiry.all
+  end
+
 end
